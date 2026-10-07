@@ -6,9 +6,6 @@ function Monitoring() {
 
   return (
     <>
-      <div className='ml-16'>
-        <h1>Hello World!</h1>
-      </div>
     </>
   )
 }
