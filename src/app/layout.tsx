@@ -20,7 +20,7 @@ export default function Layout() {
           onBack={config?.showBack ? () => navigate(-1) : undefined}
           leading={<SidebarTrigger />}
         />
-        <div>
+        <div className='flex flex-1 flex-col p-6'>
           <Outlet />
         </div>
       </SidebarInset>
