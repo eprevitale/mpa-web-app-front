@@ -8,6 +8,7 @@ const svc_stream       = "6d500020"+uuid_suffix
 const chr_cmd    = "6d500011"+uuid_suffix
 const chr_status = "6d500012"+uuid_suffix
 const chr_imu    = "6d500021"+uuid_suffix
+const chr_xfer = "6d500022"+uuid_suffix
 
 export const GATT = {
   deviceNamePrefix: 'MPA',
@@ -16,6 +17,7 @@ export const GATT = {
       uuid: svc_stream,
       characteristics: {
         imu: chr_imu, // notify
+        xfer: chr_xfer, // notify
       },
     },
     provisioning: {

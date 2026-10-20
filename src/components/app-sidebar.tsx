@@ -7,7 +7,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { Activity, Bluetooth, Home } from "lucide-react"
+import { Activity, Bluetooth, FolderOpen, Home } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 import logo from "/mpa_azul.jpg"
 
@@ -43,6 +43,12 @@ export function AppSidebar() {
             <SidebarMenuButton onClick={() => navigate('/monitoring')} className="px-4 hover:cursor-pointer">
               <Activity />
               <span>Monitoramento</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton onClick={() => navigate('/sessions')} className="px-4 hover:cursor-pointer">
+              <FolderOpen />
+              <span>Sessões</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
