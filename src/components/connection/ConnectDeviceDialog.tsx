@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/dialog"
 import { useMpa } from "@/context/mpaContext";
 import { Button } from "../ui/button";
+import { CircleCheck } from "lucide-react";
 
 interface ConnectDeviceDialogProps {
     open: boolean;
@@ -27,6 +28,13 @@ export default function ConnectDeviceDialog({
             <DialogTitle>Conectar dispositivo</DialogTitle>
             <DialogDescription>
                 {status === 'connecting' && <p>Selecione o MPA na janela do navegador…</p>}
+
+                {status === 'connected' && (
+                <>
+                    <CircleCheck />
+                    <p className="mt-2">Conectado!</p>
+                </>
+                )}
 
                 {status === 'idle' && (
                 <>
